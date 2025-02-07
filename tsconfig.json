@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 目标转发的语法
+    "module": "ESNext", // 转化的格式
+    "moduleResolution": "node", // 解析规则
+    "strict": true, // 严格模式
+    "sourceMap": true, // 启动sourcemap 调试
+    "jsx": "preserve", // 不允许ts编译jsx语法
+    "esModuleInterop": true, // es6 和 commonjs 转化
+    "lib": ["esNext", "DOM"], // 支撑enNext和 DOM 语法
+  },
+  // 编译那些文件
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
