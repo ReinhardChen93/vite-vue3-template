@@ -8,7 +8,16 @@
     "jsx": "preserve", // 不允许ts编译jsx语法
     "esModuleInterop": true, // es6 和 commonjs 转化
     "lib": ["esNext", "DOM"], // 支撑enNext和 DOM 语法
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] }, // @符号的真正含义，还需要配置vite别名和 declare module, baseUrl 和paths配合才能使用
+    "resolveJsonModule": true
   },
   // 编译那些文件
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./auto-imports.d.ts"
+  ]
 }

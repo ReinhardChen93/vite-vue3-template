@@ -1,7 +1,10 @@
 <template>
-  <div>main</div>
+  <router-view></router-view>
+  <!-- <Todo /> -->
 </template>
 
-<script setup></script>
+<script lang="ts" setup>
+//import Todo from "@/components/todo/index.vue"
+</script>
 
 <style lang="scss" scoped></style>
