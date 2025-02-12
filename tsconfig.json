@@ -19,5 +19,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "./auto-imports.d.ts"
-  ]
+  ],
+  // 要忽略的文件
+  "exclude": ["src/tests/**/*.*"]
 }

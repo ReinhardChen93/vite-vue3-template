@@ -1,7 +1,12 @@
 <template lang="">
-  <div>home</div>
+  <div>
+    <Todo />
+    <Counter />
+  </div>
 </template>
-<script>
-export default {}
+<script setup>
+import Todo from "@/components/todo/index.vue"
+import Counter from "@/components/counter/index.vue"
+
 </script>
 <style lang=""></style>

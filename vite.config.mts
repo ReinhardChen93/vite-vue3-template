@@ -31,10 +31,11 @@ export default defineConfig(async () => {
         ]
       }),
       AutoImport({
-        imports: ["vue", "vue-router"]
+        imports: ["vue", "vue-router", "pinia"],
+        eslintrc: { enabled: false }
       }),
       mockServer({
-        logLevel: "info",
+        logLevel: "off",
         mockRootDir: "./mock",
         urlPrefixes: ["/api/"],
         printStartupLog: true,
@@ -49,7 +50,15 @@ export default defineConfig(async () => {
     server: {
       port: 5173,
       host: true,
-      cors: true
+      cors: true,
+      proxy: {
+        // 反向代理
+        "/api": {
+          target: "http://jsonplaceholder.typicode.com",
+          changeOrigin: true, // 这里不加服务端无法拿到origin属性
+          rewrite: (path) => path.replace(/^\/api/, "")
+        }
+      }
     },
     test: {
       globals: true,

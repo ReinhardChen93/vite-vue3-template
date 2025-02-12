@@ -1,7 +1,7 @@
 import request from "@/utils/HttpRequest"
 
 const enum USERAPI_LIST {
-  login = "/api/login" // 修改这里，添加 /api 前缀
+  login = "/login" // 修改这里，添加 /api 前缀
 }
 
 export interface UserInfo {

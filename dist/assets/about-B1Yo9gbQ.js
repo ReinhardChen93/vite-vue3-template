@@ -1,0 +1,1 @@
+import{a as c,o as s}from"./index-h78y-8Xi.js";const a=(t,e)=>{const o=t.__vccOpts||t;for(const[r,n]of e)o[r]=n;return o},p={setup(){return{}}};function u(t,e,o,r,n,_){return s(),c("div",null,"about")}const l=a(p,[["render",u]]);export{l as default};

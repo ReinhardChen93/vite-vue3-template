@@ -242,7 +242,7 @@ class HttpRequest {
 
 // 创建默认实例
 const defaultConfig: RequestConfig = {
-  baseURL: "/", //import.meta.env.VITE_API_BASE_URL || "/api",
+  baseURL: import.meta.env.DEV ? "/api" : "/",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json"
